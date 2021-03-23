@@ -1,16 +1,32 @@
-package com.ctfo1.javahomework.part3;
+package com.ctf01.javahomework.part4;
 
-public class Programmer extends Employee{
+public class Programmer extends Employee implements IWebsiteCreator{
 
-	public Programmer(String firstName, String lastName, String position, int salary) {
-		super(firstName, lastName, position, salary);		
+	public Programmer(String firstName, String lastName, int salary) {
+		super(firstName, lastName, salary);		
 	}
 	
-	public void createWebsite(String template, String title) {
-		System.out.println(this.firstName+" is creating Website name: "+title+" template: "+template);
+	public void work() {
+		System.out.println("Programer is working.");
+		CreateWebsite();
+		FixPC();
+		InstallWindows();
 	}
-	public void installWindows(String version, String productKey) {
-		System.out.println(this.firstName+" is intalling Windows version: "+version+" Product Key:"+productKey);
+	
+	public void CreateWebsite() {
+		System.out.println("Programmer "+this.firstName+" is creating a Website.");
+	}
+	public void FixPC() {
+		System.out.println("Programmer "+this.firstName+" is fixing a PC.");
+	}
+	public void InstallWindows() {
+		System.out.println("Programmer "+this.firstName+" is installing Windows.");
 	}
 
+	@Override
+	public void createWebsite(String template, String titleName) {
+		System.out.println("Setup template: "+template);
+		System.out.println("Setup Title name: "+titleName);		
+	}
+	
 }

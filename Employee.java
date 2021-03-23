@@ -1,17 +1,13 @@
-package com.ctfo1.javahomework.part3;
+package com.ctf01.javahomework.part4;
 
 public class Employee {
-	
 	public String firstName;
 	public String lastName;
-	public String position;
 	public int salary;
 	
-	public Employee(String firstName, String lastName, String position, int salary) {
-		super();
+	public Employee(String firstName, String lastName, int salary) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.position = position;
 		this.salary = salary;
 	}
 	
@@ -24,10 +20,6 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return this.firstName+" "+this.lastName+" "+this.position+" "+this.salary;
-		}
-	public void checkPosition() {
-		System.out.println(this.firstName+" position is : "+this.position);
-	}
-	
+		return this.firstName+" "+this.lastName+" "+this.salary;
+		}	
 }
